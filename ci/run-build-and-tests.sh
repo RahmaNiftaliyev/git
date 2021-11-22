@@ -45,11 +45,12 @@ linux-gcc-4.8)
 	export MAKE_TARGETS=all
 	;;
 esac
-make -C contrib/subtree test
-make -C contrib/scalar test
 
 make $MAKE_TARGETS
 
 check_unignored_build_artifacts
+
+make -C contrib/subtree test
+make -C contrib/scalar test
 
 save_good_tree
